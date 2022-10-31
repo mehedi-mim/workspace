@@ -1,4 +1,4 @@
-### Drop all tables postgress
+### 1. Drop all tables postgress.
 
 ```
 DROP SCHEMA public CASCADE;
