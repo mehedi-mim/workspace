@@ -16,7 +16,7 @@ docker exec -it <container_id> /bin/bash
 ```
 ### 4. Accessing through ssh
 ```
-ssh root@43.224.110.147 -p 2506
+ssh root@<im_address> -p <port>
 ```
 ### 5. Creating backup from postgres database:
 ```
