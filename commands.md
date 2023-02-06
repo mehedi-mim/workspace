@@ -32,4 +32,8 @@ docker cp <dump_file> container_id:/
 ```
 pg_restore --no-owner --no-privileges --role=postgres -U <user_name> -d <database_name> -1 <dump_file>
 ```
-
+### 8. Take input output from file
+```
+freopen("input.txt", "r", stdin);
+freopen("output.txt", "w", stdout);
+```
