@@ -32,8 +32,21 @@ docker cp <dump_file> container_id:/
 ```
 pg_restore --no-owner --no-privileges --role=postgres -U <user_name> -d <database_name> -1 <dump_file>
 ```
-### 8. Take input output from file
+### 8. UV commands
 ```
-freopen("input.txt", "r", stdin);
-freopen("output.txt", "w", stdout);
+uv run ruff check          # Run linter (Ruff) on the project
+uv lock                    # Resolve dependencies and generate lockfile
+uv sync                    # Create/update virtual environment and install deps from lockfile
+uv run example.py          # Run a Python script inside uv-managed environment
+uv tool install ruff       # Install Ruff as a global uv-managed tool
+uv python install 3.10 3.11 3.12  # Download multiple Python versions
+uv venv                    # Create a virtual environment using default Python
+uv venv --python 3.12.0    # Create a virtual environment with Python 3.12.0
+uv pip list                # List installed packages in the uv environment
 ```
+
+
+
+
+
+
